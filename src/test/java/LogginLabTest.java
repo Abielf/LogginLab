@@ -31,4 +31,16 @@ public class LogginLabTest {
             }
         }
     }
+    @org.junit.Test
+    public void reachTest(){
+        //Instance of test object
+        LogginLab reachTest = new LogginLab();
+        reachTest.setThreshold(10);
+        assertTrue(reachTest.thresholdReached(11));
+        assertTrue(reachTest.thresholdReached(100));
+        assertFalse(reachTest.thresholdReached(10));
+        assertFalse(reachTest.thresholdReached(2));
+        assertFalse(reachTest.thresholdReached(-3));
+
+    }
 }
